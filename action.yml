@@ -1,0 +1,22 @@
+name: Publish PowerShell Script
+description: Publish a PowerShell script to PowerShell Gallery.
+inputs:
+  name:
+    description: Optional name to use instead of the filename
+    required: false
+  path:
+    description: The path to the script file
+    required: true
+  nuget_api_key:
+    description: NuGet API Key for PowerShell Gallery
+    required: true
+runs:
+  using: docker
+  image: Dockerfile
+  args:
+    - ${{ inputs.name }}
+    - ${{ inputs.path }}
+    - ${{ inputs.nuget_api_key }}
+branding:
+  icon: upload-cloud
+  color: gray-dark
