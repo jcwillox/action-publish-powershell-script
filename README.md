@@ -20,9 +20,10 @@ jobs:
       - name: Publish to PSGallery
         uses: jcwillox/action-publish-powershell-script@main
         with:
-          name: lptstr-winfetch  # use an alternate name as 'winfetch' is taken
-          path: winfetch.ps1
+          path: myscript.ps1
           nuget_api_key: ${{ secrets.PSGALLERY_KEY }}
+          # you can use an alternate name if the scripts name is taken
+          name: alternate-name
 ```
 
 
