@@ -1,5 +1,5 @@
 name: Publish PowerShell Script
-description: Publish a PowerShell script to PowerShell Gallery.
+description: Publish a PowerShell script to the PowerShell Gallery.
 inputs:
   name:
     description: Optional name to use instead of the filename
